@@ -1,41 +1,33 @@
+import { Console } from 'console';
 import { readdir, lstat } from 'fs/promises';
 import path from 'path';
 
 async function readDirectory(root){
   try {
     const files = await readdir(root);
+    let responseArray = [];
     for (const file of files) {
       let name = path.join(root, file);
       let stats = await lstat(name);
       let isDir = stats.isDirectory();
       if (isDir) {
-        console.log(path.join(name,'/'));
-        await readDirectory(name);
+        responseArray.push(path.join(name,'/'));
+        let subDirArray = await readDirectory(name);
+        console.log(subDirArray);
+        responseArray.push(...subDirArray);
       } else {
-        console.log(name);
+        responseArray.push(name);
       }
     }
+    // console.log(responseArray);
+    return responseArray;
   } catch (err) {
     console.error(err);
   }
 }
 
-
+(async function() {
 const origin = "./";
-// console.log('El path es: '+origin);
-readDirectory(origin);
-
-
-// fs.lstat(path, (err, stats) => {
-
-//     if(err)
-//         return console.log(err); //Handle error
-
-//     console.log(`Is file: ${stats.isFile()}`);
-//     console.log(`Is directory: ${stats.isDirectory()}`);
-//     console.log(`Is symbolic link: ${stats.isSymbolicLink()}`);
-//     console.log(`Is FIFO: ${stats.isFIFO()}`);
-    // console.log(`Is socket: ${stats.isSocket()}`);
-//     console.log(`Is character device: ${stats.isCharacterDevice()}`);
-//     console.log(`Is block device: ${stats.isBlockDevice()}`);
-// });
+let originDirectory = await readDirectory(origin);
+console.log(originDirectory);
+})();
