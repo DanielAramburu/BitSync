@@ -1,7 +1,7 @@
 import path from 'path';
 import dir  from '../dir.mjs';
 
-const TEST_DIR  = path.dirname(import.meta.url.replace('file:///', ''));
+const TEST_DIR  = decodeURIComponent(path.dirname(import.meta.url.replace('file:///', '')));
 const ROOT_DIR  = path.resolve(TEST_DIR, 'content');
 const EMPTY_DIR = path.resolve(ROOT_DIR, 'empty');
 const FILL_DIR  = path.resolve(ROOT_DIR, 'fill');
