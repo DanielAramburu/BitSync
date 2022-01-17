@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/DanielAramburu/BitSync/issues"
   },
-  "homepage": "https://github.com/DanielAramburu/BitSync#readme"
+  "homepage": "https://github.com/DanielAramburu/BitSync#readme",
+  "devDependencies": {
+    "jest": "^27.4.7"
+  }
 }
