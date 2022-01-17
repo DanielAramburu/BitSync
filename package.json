@@ -1,0 +1,19 @@
+{
+  "name": "bitsync",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dirReader.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DanielAramburu/BitSync.git"
+  },
+  "author": "Daniel Aramburu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DanielAramburu/BitSync/issues"
+  },
+  "homepage": "https://github.com/DanielAramburu/BitSync#readme"
+}
