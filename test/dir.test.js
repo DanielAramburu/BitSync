@@ -6,11 +6,11 @@ const ROOT_DIR  = path.resolve(TEST_DIR, 'content');
 const EMPTY_DIR = path.resolve(ROOT_DIR, 'empty');
 const FILL_DIR  = path.resolve(ROOT_DIR, 'fill');
 
-test('get empty folder', async () => {
+test.skip('get empty folder', async () => {
   expect(await dir(EMPTY_DIR)).toEqual([]);
 });
 
-test('folder with content', async () => {
+test.skip('folder with content', async () => {
   let result = await dir(FILL_DIR);
   expect(result[0].name).toBe('1.txt');
   expect(result[1].name).toBe('2.txt');
