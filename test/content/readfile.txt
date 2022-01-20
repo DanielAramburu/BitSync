@@ -1,0 +1,1 @@
+Este es un archivo de prueba para comprobar el funcionamiento de la utilidad read() del proyecto bitsync.
