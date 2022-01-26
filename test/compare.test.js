@@ -5,7 +5,7 @@ import compare from '../compare.js';
 const TEST_DIR  = decodeURIComponent(path.dirname(import.meta.url.replace('file:///', '')));
 const ROOT_DIR  = path.resolve(TEST_DIR, 'content');
 
-test('equal folders', async () => {
+test.skip('equal folders', async () => {
     let origin = await dir(path.resolve(ROOT_DIR, 'equal/origin'));
     let target = await dir(path.resolve(ROOT_DIR, 'equal/target'));
     let result = await compare(origin, target);
@@ -14,7 +14,7 @@ test('equal folders', async () => {
     });
 });
 
-test('left', async () => {
+test.skip('left', async () => {
     let origin = await dir(path.resolve(ROOT_DIR, 'left/origin'));
     let target = await dir(path.resolve(ROOT_DIR, 'left/target'));
     let result = await compare(origin, target);
@@ -23,7 +23,7 @@ test('left', async () => {
     });
 });
 
-test('right', async () => {
+test.skip('right', async () => {
     let origin = await dir(path.resolve(ROOT_DIR, 'right/origin'));
     let target = await dir(path.resolve(ROOT_DIR, 'right/target'));
     let result = await compare(origin, target);
@@ -32,7 +32,7 @@ test('right', async () => {
     });
 });
 
-test('size', async () => {
+test.skip('size', async () => {
     let origin = await dir(path.resolve(ROOT_DIR, 'size/origin'));
     let target = await dir(path.resolve(ROOT_DIR, 'size/target'));
     let result = await compare(origin, target);
@@ -41,7 +41,7 @@ test('size', async () => {
     });
 });
 
-test('date', async () => {
+test.skip('date', async () => {
     let origin = await dir(path.resolve(ROOT_DIR, 'date/origin'));
     let target = await dir(path.resolve(ROOT_DIR, 'date/target'));
     let result = await compare(origin, target);
@@ -50,7 +50,7 @@ test('date', async () => {
     });
 });
 
-test('file-folder', async () => {
+test.skip('file-folder', async () => {
     let origin = await dir(path.resolve(ROOT_DIR, 'file-folder/origin'));
     let target = await dir(path.resolve(ROOT_DIR, 'file-folder/target'));
     let result = await compare(origin, target);
@@ -59,7 +59,7 @@ test('file-folder', async () => {
     });
 });
 
-test('all-features', async () => {
+test.skip('all-features', async () => {
     let origin = await dir(path.resolve(ROOT_DIR, 'all-features/origin'));
     let target = await dir(path.resolve(ROOT_DIR, 'all-features/target'));
     let result = await compare(origin, target);

@@ -1,0 +1,1 @@
+File read,Este es un archivo de prueba para comprobar el funcionamiento de la utilidad read() del proyecto bitsync.Archivo escrito desde la funcion write()

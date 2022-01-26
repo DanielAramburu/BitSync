@@ -1,11 +1,11 @@
 import create from "../create.js";
 
-test('Create directory', async () => {
+test.skip('Create directory', async () => {
     let result = await create("./test/testingMKDIR");
     expect(result).toEqual('Directory created');
 });
 
-test('wrong name to create a directory', async () => {
+test.skip('wrong name to create a directory', async () => {
     let result = await create("///");
     expect(result).toBe({
         "code": "EPERM",
@@ -15,7 +15,7 @@ test('wrong name to create a directory', async () => {
     });
 });
 
-test('Directory already exist', async () => {
+test.skip('Directory already exist', async () => {
     let result = await create('./test');
     expect(result).toBe('This directory already exist')
 });
